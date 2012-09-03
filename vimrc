@@ -1,3 +1,6 @@
+" enable pathogen.vim plugin
+call pathogen#infect()
+
 filetype on
 syntax on
 
