@@ -1,0 +1,6 @@
+Installation steps:
+    
+    1) git clone git://github.com/kijasek/dotvim.git ~/.vim
+    2) Create symlink:
+        ln -s ~/.vim/vimrc ~/.vimrc
+
