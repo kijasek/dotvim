@@ -3,4 +3,8 @@ Installation steps:
     1) git clone git://github.com/kijasek/dotvim.git ~/.vim
     2) Create symlink:
         ln -s ~/.vim/vimrc ~/.vimrc
+    3) Install submodules
+        cd ~/.vim
+        git submodule init
+        git submodule update
 
