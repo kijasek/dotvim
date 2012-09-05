@@ -9,8 +9,19 @@ filetype plugin indent on
 set nocompatible
 
 " store backup files in one location
-set backupdir=~/.vim-tmp,~/tmp,/tmp
-set directory=~/.vim-tmp,~/tmp,/tmp
+set backupdir=~/.vim/sessions,~/tmp,/tmp
+set directory=~/.vim/sessions,~/tmp,/tmp
+
+" colorscheme and gui tunning
+if has('gui_running')
+   " Remove menu bar
+   set guioptions-=m
+   " Remove toolbar
+   set guioptions-=T
+else
+   set t_Co=256
+endif
+colorscheme Tomorrow-Night-Eighties
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
@@ -42,7 +53,8 @@ set tabstop=4
 
 " highligh current line
 set cul
-hi CursorLine term=none cterm=none ctermbg=grey
+" if using different colorscheme than Tommorow, that might be useful
+"hi CursorLine term=none cterm=none ctermbg=grey
 
 " show cmd being written
 set showcmd
@@ -61,6 +73,5 @@ set scrolloff=8
 
 " command menu
 set wildmenu
-set wildmode=list:longest
 
 
