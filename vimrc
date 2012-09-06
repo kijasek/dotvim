@@ -83,3 +83,21 @@ set ttyfast
 " don't beep
 set visualbell
 set noerrorbells
+
+" don't blink
+set vb t_vb=
+
+" start Tagbar plugin
+nmap <F4> :TagbarToggle<CR>
+
+" console tile
+set title
+
+" Turn on python intellisense 
+au FileType python set omnifunc=pythoncomplete#Complete
+" dont use the first result, but the best match
+" display menu even if there is only one match
+set completeopt=longest,menuone
+" Remember cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
