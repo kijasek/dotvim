@@ -67,6 +67,8 @@ set encoding=utf-8
 
 " NERDTree shortcut
 noremap <silent> <F2> :NERDTreeToggle<CR>
+" NERDTree filters
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.class$']
 
 " Start scrolling when we're 8 lines away from margins
 set scrolloff=5 
@@ -85,6 +87,7 @@ set noerrorbells
 
 " don't blink
 set vb t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " start Tagbar plugin
 nmap <F4> :TagbarToggle<CR>
