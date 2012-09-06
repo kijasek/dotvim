@@ -81,7 +81,6 @@ set laststatus=2
 set ttyfast
 
 " don't beep
-set visualbell
 set noerrorbells
 
 " don't blink
