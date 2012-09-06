@@ -8,3 +8,12 @@ Installation steps:
         git submodule init
         git submodule update
 
+Additional steps:
+    
+    -- jsctags for tagbar in js files: https://github.com/mozilla/doctorjs
+            git checkout 1062dd31625cc002261f15e68af77eedd63a56f6
+            sudo make install
+            export NODE_PATH to $(jstags_dir)/lib/jsctags
+    -- pyflakes or pylint for syntastic plugin to work
+    -- jslint or jshint for syntastic plugin to work
+
