@@ -69,9 +69,17 @@ set encoding=utf-8
 noremap <silent> <F2> :NERDTreeToggle<CR>
 
 " Start scrolling when we're 8 lines away from margins
-set scrolloff=8 
+set scrolloff=5 
 
 " command menu
 set wildmenu
 
+" always display statusline
+set laststatus=2
 
+" smoother changes
+set ttyfast
+
+" don't beep
+set visualbell
+set noerrorbells
