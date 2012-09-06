@@ -67,8 +67,14 @@ set encoding=utf-8
 
 " NERDTree shortcut
 noremap <silent> <F2> :NERDTreeToggle<CR>
+noremap <silent> <F5> :NERDTreeFind<CR>
 " NERDTree filters
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.class$']
+
+" FuzzyFinder shortcut
+noremap <silent> <F3> :FufFile<CR>
+" FuzzyFinder filter
+let g:fuf_file_exclude = '\v\~$|\.pyc$|\.pyo$|\.swp|\.class$'
 
 " Start scrolling when we're 8 lines away from margins
 set scrolloff=5 
