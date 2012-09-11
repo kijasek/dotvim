@@ -122,6 +122,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " ctags configuration
 set tags=~/.vim/tags/pyevn,~/.vim/tags/workspace
-" refresh current VIRTUALENV
-map <F10> :!ctags --tag-relative=yes -R -f ~/.vim/tags/pyenv `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`<CR>
-map <F12> :!ctags --tag-relative=yes -R -f ~/.vim/tags/workspace .<CR>
+" refresh tags for current VIRTUALENV
+map <F10> :!ctags --languages=python --tag-relative=yes -R -f ~/.vim/tags/pyenv `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`<CR>
+" refresh tags for project dir
+map <F12> :!ctags --languages=python --tag-relative=yes -R -f ~/.vim/tags/workspace .<CR>
