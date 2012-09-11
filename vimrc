@@ -20,6 +20,7 @@ if has('gui_running')
    set guioptions-=T
 else
    set t_Co=256
+
 endif
 colorscheme Tomorrow-Night-Eighties
 
@@ -109,3 +110,8 @@ set completeopt=longest,menuone
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+" ctags configuration
+set tags=~/.vim/tags/pyevn,~/.vim/tags/workspace
+" refresh current VIRTUALENV
+map <F10> :!ctags --tag-relative=yes -R -f ~/.vim/tags/pyenv `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`<CR>
+map <F12> :!ctags --tag-relative=yes -R -f ~/.vim/tags/workspace .<CR>
