@@ -24,8 +24,11 @@ else
    set t_Co=256
    " map ctrl x ctrl o to ctrl space
    inoremap <C-@> <C-x><C-o>
-
+   " fot theme to working ok
+   let g:solarized_termcolors=256
 endif
+" theme
+colorscheme solarized
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
