@@ -18,11 +18,14 @@ if has('gui_running')
    set guioptions-=m
    " Remove toolbar
    set guioptions-=T
+   " map ctrl x ctrl o to ctrl space
+   inoremap <C-Space> <C-x><C-o>
 else
    set t_Co=256
+   " map ctrl x ctrl o to ctrl space
+   inoremap <C-@> <C-x><C-o>
 
 endif
-colorscheme Tomorrow-Night-Eighties
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
@@ -54,7 +57,7 @@ set tabstop=4
 
 " highligh current line
 set cul
-" if using different colorscheme than Tommorow, that might be useful
+" that might be useful, depending on colorscheme
 "hi CursorLine term=none cterm=none ctermbg=grey
 
 " show cmd being written
@@ -74,6 +77,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.class$']
 
 " FuzzyFinder shortcut
 noremap <silent> <F3> :FufFile<CR>
+noremap <Leader>b :FufBuffer<CR>
 " FuzzyFinder filter
 let g:fuf_file_exclude = '\v\~$|\.pyc$|\.pyo$|\.swp|\.class$'
 
@@ -101,6 +105,9 @@ nmap <F4> :TagbarToggle<CR>
 
 " console tile
 set title
+
+" we want long lines to be long lines
+set nowrap
 
 " Turn on python intellisense 
 au FileType python set omnifunc=pythoncomplete#Complete
