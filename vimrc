@@ -126,3 +126,6 @@ set tags=~/.vim/tags/pyevn,~/.vim/tags/workspace
 map <F10> :!ctags --languages=python --tag-relative=yes -R -f ~/.vim/tags/pyenv `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`<CR>
 " refresh tags for project dir
 map <F12> :!ctags --languages=python --tag-relative=yes -R -f ~/.vim/tags/workspace .<CR>
+
+" gundo mapping
+nnoremap <F6> :GundoToggle<CR>
