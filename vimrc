@@ -129,3 +129,6 @@ map <F12> :!ctags --languages=python --tag-relative=yes -R -f ~/.vim/tags/worksp
 
 " gundo mapping
 nnoremap <F6> :GundoToggle<CR>
+
+" my virtualenvs direcotory
+let g:virtualenv_directory = '~/pythons/'
