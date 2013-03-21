@@ -132,3 +132,6 @@ nnoremap <F6> :GundoToggle<CR>
 
 " my virtualenvs direcotory
 let g:virtualenv_directory = '~/pythons/'
+
+" background change
+map <F8> :set background=dark<CR>
