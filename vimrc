@@ -121,7 +121,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " gundo mapping
 nnoremap <F6> :GundoToggle<CR>
 
+" background change
+map <F8> :set background=dark<CR>
+
 " check out ftdetect direcotry
 " for filetype specific settings
-
 
