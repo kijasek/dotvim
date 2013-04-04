@@ -122,7 +122,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 nnoremap <F6> :GundoToggle<CR>
 
 " background change
-map <F8> :set background=dark<CR>
+" map <F8> :set background=dark<CR>
+call togglebg#map("<F8>")
 
 " check out ftdetect direcotry
 " for filetype specific settings
