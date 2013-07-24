@@ -20,6 +20,8 @@ if has('gui_running')
    set guioptions-=T
    " map ctrl x ctrl o to ctrl space
    inoremap <C-Space> <C-x><C-o>
+   " cursor is on
+   set nomousehide
 else
    set t_Co=256
    " map ctrl x ctrl o to ctrl space
@@ -128,3 +130,4 @@ call togglebg#map("<F8>")
 " check out ftdetect direcotry
 " for filetype specific settings
 
+set tags=tags;/
