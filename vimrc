@@ -60,7 +60,7 @@ set smartcase
 
 " use spaces not tabs
 set expandtab
-set shiftwidth=4 
+set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
@@ -91,7 +91,7 @@ noremap <Leader>b :FufBuffer<CR>
 let g:fuf_file_exclude = '\v\~$|\.pyc$|\.pyo$|\.swp|\.class$'
 
 " Start scrolling when we're 8 lines away from margins
-set scrolloff=5 
+set scrolloff=5
 
 " command menu
 set wildmenu
@@ -127,12 +127,19 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " gundo mapping
 nnoremap <Leader>u :GundoToggle<CR>
 
-" background change
-" map <F8> :set background=dark<CR>
-call togglebg#map("<F8>")
+" set leader+c to copy selection to system cliboard while in visual mode
+vnoremap <Leader>c "*y
+
+" set leader+v to paste from system clipboard
+imap <Leader>v <ESC>"*pa
+nmap <Leader>v <ESC>"*pa
+
+" to retain indentation of the pasted text
+set pastetoggle=<F8>
 
 " check out ftdetect direcotry
 " for filetype specific settings
 
 set tags=tags;/
+
 
