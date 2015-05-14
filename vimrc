@@ -30,7 +30,8 @@ else
    let g:solarized_termcolors=256
 endif
 " theme
-colorscheme solarized
+" colorscheme solarized
+colorscheme badwolf
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
