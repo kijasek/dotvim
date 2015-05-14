@@ -12,8 +12,8 @@ set omnifunc=syntaxcomplete#Complete
 set nocompatible
 
 " store backup files in one location
-set backupdir=~/.vim/sessions,~/tmp,/tmp
-set directory=~/.vim/sessions,~/tmp,/tmp
+set backupdir=~/.vim/backups//,~/tmp//,/tmp//
+set directory=~/.vim/sessions//,~/tmp//,/tmp//
 
 " colorscheme and gui tunning
 if has('gui_running')
