@@ -5,6 +5,9 @@ call pathogen#infect()
 " enable plugins
 filetype plugin indent on
 
+" turn on Omni completion
+set omnifunc=syntaxcomplete#Complete
+
 " disable vi compatibility
 set nocompatible
 
@@ -122,7 +125,7 @@ set completeopt=longest,menuone
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " gundo mapping
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 
 " background change
 " map <F8> :set background=dark<CR>
@@ -132,3 +135,4 @@ call togglebg#map("<F8>")
 " for filetype specific settings
 
 set tags=tags;/
+
