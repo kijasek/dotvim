@@ -22,3 +22,6 @@
 [submodule "bundle/badwolf"]
 	path = bundle/badwolf
 	url = https://github.com/sjl/badwolf
+[submodule "bundle/seoul256"]
+	path = bundle/seoul256
+	url = https://github.com/junegunn/seoul256.vim
