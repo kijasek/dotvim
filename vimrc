@@ -131,8 +131,8 @@ nnoremap <Leader>u :GundoToggle<CR>
 vnoremap <Leader>c "*y
 
 " set leader+v to paste from system clipboard
-imap <Leader>v <ESC>"*pa
-nmap <Leader>v <ESC>"*pa
+imap <Leader>v <ESC>"*p
+nmap <Leader>v <ESC>"*p
 
 " to retain indentation of the pasted text
 set pastetoggle=<F8>
