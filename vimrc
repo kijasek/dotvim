@@ -137,9 +137,6 @@ nmap <Leader>v <ESC>"*pa
 " to retain indentation of the pasted text
 set pastetoggle=<F8>
 
-" check out ftdetect direcotry
-" for filetype specific settings
-
+" set folder for tags that can be used for intelisense
 set tags=tags;/
-
 
