@@ -64,6 +64,10 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
+" special case for html and css files
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+
 " highligh current line
 set cul
 " that might be useful, depending on colorscheme
@@ -126,6 +130,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " gundo mapping
 nnoremap <Leader>u :GundoToggle<CR>
+
+" show all errors in file (syntastic plugin)
+noremap <Leader>s :Errors<CR>
 
 " set leader+c to copy selection to system cliboard while in visual mode
 vnoremap <Leader>c "*y
