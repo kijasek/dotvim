@@ -25,6 +25,15 @@ if has('gui_running')
    inoremap <C-Space> <C-x><C-o>
    " cursor is on
    set nomousehide
+   
+   " set font in gvim mode
+   if has("gui_gtk2")
+     set guifont=DejaVu\ Sans\ Mono\ 13
+   elseif has("gui_macvim")
+     set guifont=Menlo\ Regular:h14
+   elseif has("gui_win32")
+     set guifont=Consolas:h11:cANSI
+   endif
 else
    set t_Co=256
    " map ctrl x ctrl o to ctrl space
