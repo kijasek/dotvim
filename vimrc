@@ -1,3 +1,15 @@
+" make colorscheme and pathogen work on windows
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+endif
+
+" disable vi compatibility
+set nocompatible
+
 " enable pathogen.vim plugin
 filetype off
 call pathogen#infect()
@@ -7,9 +19,6 @@ filetype plugin indent on
 
 " turn on Omni completion
 set omnifunc=syntaxcomplete#Complete
-
-" disable vi compatibility
-set nocompatible
 
 " store backup files in one location
 set backupdir=~/.vim/backups//,~/tmp//,/tmp//

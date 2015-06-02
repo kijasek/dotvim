@@ -17,3 +17,7 @@ Additional steps:
     -- pyflakes or pylint for syntastic plugin to work
     -- jslint or jshint for syntastic plugin to work
 
+Windows additional steps:
+    -- check :echo $HOME for home directory for _vimrc
+    -- create _vimrc file with the following contents 
+        source ~/.vim/vimrc
